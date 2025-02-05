@@ -1,4 +1,5 @@
 # Deepseek R1 MCP Server
+[![smithery badge](https://smithery.ai/badge/@66julienmartin/mcp-server-deepseek_r1)](https://smithery.ai/server/@66julienmartin/mcp-server-deepseek_r1)
 
 A Model Context Protocol (MCP) server implementation for the Deepseek R1 language model. Deepseek R1 is a powerful language model optimized for reasoning tasks with a context window of 8192 tokens.
 
@@ -6,6 +7,16 @@ Why Node.js?
 This implementation uses Node.js/TypeScript as it provides the most stable integration with MCP servers. The Node.js SDK offers better type safety, error handling, and compatibility with Claude Desktop.
 
 ## Quick Start
+
+### Installing via Smithery
+
+To install Deepseek R1 for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@66julienmartin/mcp-server-deepseek_r1):
+
+```bash
+npx -y @smithery/cli install @66julienmartin/mcp-server-deepseek_r1 --client claude
+```
+
+### Installing manually
 ```bash
 # Clone and install
 git clone https://github.com/66julienmartin/MCP-server-Deepseek_R1.git
