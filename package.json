@@ -1,0 +1,28 @@
+{
+  "name": "deepseek_r1",
+  "version": "1.0.0",
+  "description": "MCP server implementation for Deepseek R1 model",
+  "type": "module",
+  "bin": {
+    "deepseek_r1": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "keywords": ["mcp", "deepseek", "claude", "ai", "llm"],
+  "author": "Kamel IRZOUNI",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.80.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
