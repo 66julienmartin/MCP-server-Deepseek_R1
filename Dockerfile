@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm install --ignore-scripts
+# Install dependencies including devDependencies
+RUN npm install
 
 # Copy the rest of the application
 COPY . .
@@ -28,14 +28,11 @@ COPY --from=builder /app/build /app/build
 COPY --from=builder /app/package.json /app/package.json
 COPY --from=builder /app/package-lock.json /app/package-lock.json
 
-# Install only production dependencies
-RUN npm ci --only=production
+# Install only production dependencies without running scripts
+RUN npm ci --omit=dev --ignore-scripts
 
 # Set environment variables (ensure to replace with your actual API key)
 ENV DEEPSEEK_API_KEY=your-api-key-here
-
-# Expose necessary ports (if applicable)
-# EXPOSE 8080  # Example: adjust according to your needs
 
 # Command to run the server
 CMD ["node", "build/index.js"]
