@@ -6,6 +6,8 @@ A Model Context Protocol (MCP) server implementation for the Deepseek R1 languag
 Why Node.js?
 This implementation uses Node.js/TypeScript as it provides the most stable integration with MCP servers. The Node.js SDK offers better type safety, error handling, and compatibility with Claude Desktop.
 
+<a href="https://glama.ai/mcp/servers/qui5thpyvu"><img width="380" height="200" src="https://glama.ai/mcp/servers/qui5thpyvu/badge" alt="Deepseek R1 Server MCP server" /></a>
+
 ## Quick Start
 
 ### Installing via Smithery
